@@ -1,0 +1,7 @@
+title: "Shaoxuanzi Sheng"
+description: "Political Science | Duke University"
+
+theme: beautiful-jekyll
+
+custom_css:
+  - assets/css/custom.css
