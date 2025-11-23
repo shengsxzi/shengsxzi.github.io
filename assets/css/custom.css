@@ -1,17 +1,21 @@
 .home-intro-container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 30px;
   margin-top: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home-photo img {
-  width: 260px;      /* 控制头像宽度 */
-  height: auto;      /* 保持长方形比例 */
-  border-radius: 0;  /* 🔥 确保不是圆形 */
+  width: 260px;
+  height: auto;
+  border-radius: 0;
   object-fit: cover;
+  display: block;
 }
 
 .home-text {
-  max-width: 600px;
+  max-width: 500px;
 }
