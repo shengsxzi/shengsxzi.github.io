@@ -1,0 +1,17 @@
+.home-intro-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.home-photo img {
+  width: 260px;      /* 控制头像宽度 */
+  height: auto;      /* 保持长方形比例 */
+  border-radius: 0;  /* 🔥 确保不是圆形 */
+  object-fit: cover;
+}
+
+.home-text {
+  max-width: 600px;
+}
