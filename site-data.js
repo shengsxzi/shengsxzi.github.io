@@ -47,7 +47,7 @@ window.siteData = {
           },
           {
             title: "State Presence as State Building",
-            coauthors: "master's thesis in progress",
+            coauthors: "Master's thesis in progress",
             description:
               "Examines how state presence contributes to state building in contemporary China. The thesis design and empirical strategy are currently in development at Duke University.",
             preprintUrl: ""
