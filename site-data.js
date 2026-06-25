@@ -60,6 +60,8 @@ window.siteData = {
           {
             title: "Crisis-Driven Institution Building: Evidence from COVID-19",
             coauthors: "with Xiongfu Xiao",
+            status: "under review",
+            ssrnUrl: "",
             description:
               "Develops a sequential theory of crisis-driven institution building using a country-week panel of COVID-19 responses, fixed effects, and a leave-one-out exposure instrumental-variable design.",
             preprintUrl: ""
@@ -67,6 +69,8 @@ window.siteData = {
           {
             title: "Administrative Reform as Institutional Purge: Evidence from Vietnam",
             coauthors: "with Xiongfu Xiao and Qingwen Deng",
+            status: "under review",
+            ssrnUrl: "",
             description:
               "Studies authoritarian administrative reform through Vietnam's 2025 province-level consolidation, combining a formal model with an original province-level dataset.",
             preprintUrl: ""

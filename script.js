@@ -72,8 +72,19 @@ function makeProjectArticle(item) {
     em.textContent = `, ${item.coauthors}`;
     h3.appendChild(em);
   }
+  const status = document.createElement("p");
+  status.className = "project-status";
+  if (item.status) {
+    status.appendChild(document.createTextNode(item.status));
+  }
+  if (item.ssrnUrl) {
+    if (item.status) status.appendChild(document.createTextNode(" · "));
+    status.appendChild(makeLink(item.ssrnUrl, "SSRN"));
+  }
   p.textContent = item.description;
-  article.append(h3, p);
+  article.appendChild(h3);
+  if (item.status || item.ssrnUrl) article.appendChild(status);
+  article.appendChild(p);
   if (item.preprintUrl) {
     article.appendChild(makeLink(item.preprintUrl, "Preprint", "project-link"));
   }

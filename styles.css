@@ -264,6 +264,18 @@ h3 {
   font-weight: 400;
 }
 
+.project-status {
+  margin-bottom: 0.32rem;
+  color: var(--muted);
+  font-size: 0.94rem;
+  font-style: italic;
+}
+
+.project-status a {
+  font-style: normal;
+  font-weight: 700;
+}
+
 .project-link {
   display: inline-block;
   margin-top: 0.1rem;
