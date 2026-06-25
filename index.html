@@ -1,21 +1,68 @@
----
-layout: default
----
-{% raw %}
-<div class="home-intro-container">
-  <div class="home-photo">
-    <img src="assets/img/profile.jpg" alt="Profile photo">
-  </div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shaoxuanzi Sheng</title>
+    <meta
+      name="description"
+      content="Academic homepage of Shaoxuanzi Sheng, M.A. student in Political Science at Duke University."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="home">
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <div class="home-text">
-    <h1 style="margin-top: 0;">Shaoxuanzi Sheng</h1>
-    <p>M.A. Student in Political Science, Duke University</p>
-    <p>Interested in political communication and digital governance.</p>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="brand" href="./index.html" id="site-name">Shaoxuanzi Sheng</a>
+        <div class="nav-links" id="topnav"></div>
+      </nav>
+    </header>
 
-    <p>
-      <a href="/cv/" class="btn btn-primary">CV</a>
-      <a href="mailto:your_email@duke.edu" class="btn btn-secondary">Email</a>
-    </p>
-  </div>
-</div>
-{% endraw %}
+    <main class="home-shell" id="main-content">
+      <aside class="profile-panel">
+        <img
+          class="profile-photo"
+          id="profile-photo"
+          src="./assets/profile.jpg"
+          alt="Shaoxuanzi Sheng portrait"
+          width="220"
+          height="288"
+        />
+        <h1 id="person-name">Shaoxuanzi Sheng</h1>
+        <p class="profile-chinese-name" id="person-chinese-name">盛邵萱子</p>
+        <p class="profile-role" id="person-role">M.A. Student in Political Science</p>
+        <p class="profile-org" id="person-org">Department of Political Science, Duke University</p>
+        <p class="profile-location" id="person-location">Durham, NC</p>
+        <div class="profile-links" id="profile-links"></div>
+      </aside>
+
+      <section class="home-content">
+        <div class="home-intro" id="home-intro"></div>
+        <section class="home-section">
+          <h2>Research Interests</h2>
+          <p id="home-research-interests"></p>
+        </section>
+        <section class="home-section">
+          <h2>Education</h2>
+          <ul class="education-list" id="home-education"></ul>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> <span id="footer-name">Shaoxuanzi Sheng</span>.</p>
+    </footer>
+
+    <script src="./site-data.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

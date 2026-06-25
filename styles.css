@@ -1,0 +1,403 @@
+:root {
+  --page: #ffffff;
+  --ink: #111827;
+  --muted: #4b5563;
+  --line: #e5e7eb;
+  --duke-blue: #012169;
+  --duke-blue-soft: #eef3ff;
+  --max: 960px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--ink);
+  background: var(--page);
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--duke-blue);
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.24;
+  letter-spacing: 0;
+}
+
+h1 {
+  margin-bottom: 0.45rem;
+  font-family: "Lora", Georgia, serif;
+  font-size: clamp(1.65rem, 3.6vw, 2.1rem);
+  font-weight: 600;
+}
+
+h2 {
+  margin-bottom: 0.55rem;
+  color: var(--duke-blue);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+h3 {
+  margin-bottom: 0.35rem;
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 5;
+  padding: 0.45rem 0.65rem;
+  color: #fff;
+  background: var(--ink);
+  transform: translateY(-140%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header {
+  border-bottom: 2px solid var(--duke-blue);
+  background: #fff;
+}
+
+.site-nav {
+  width: min(100%, var(--max));
+  margin: 0 auto;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.4rem;
+}
+
+.brand {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.nav-links a {
+  min-width: 5.5rem;
+  padding: 0.4rem 0.85rem;
+  color: var(--duke-blue);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  background: var(--duke-blue-soft);
+  text-decoration: none;
+}
+
+.nav-links a[aria-current="page"] {
+  color: #fff;
+  background: var(--duke-blue);
+}
+
+.home-shell,
+.page-shell {
+  width: min(100%, var(--max));
+  margin: 0 auto;
+  padding: 3rem 1.25rem 2.3rem;
+}
+
+.home-shell {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 3.4rem;
+  align-items: center;
+  min-height: calc(100vh - 9rem);
+}
+
+.profile-panel {
+  align-self: center;
+  text-align: center;
+}
+
+.profile-photo {
+  display: block;
+  width: 205px;
+  max-width: 100%;
+  height: 250px;
+  margin: 0 auto 1.22rem;
+  border-radius: 3px;
+  object-fit: cover;
+  object-position: 50% 38%;
+  background: #f3f4f6;
+}
+
+.profile-panel h1 {
+  margin-bottom: 0.34rem;
+  font-size: clamp(1.42rem, 2.7vw, 1.78rem);
+}
+
+.profile-chinese-name {
+  margin-bottom: 1.18rem;
+  color: var(--duke-blue);
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.profile-role {
+  margin-bottom: 0.58rem;
+  color: var(--ink);
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+
+.profile-org,
+.profile-location {
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
+.profile-org {
+  margin-bottom: 0.52rem;
+}
+
+.profile-location {
+  margin-bottom: 1.2rem;
+}
+
+.profile-links {
+  display: block;
+  font-size: 0.93rem;
+  overflow-wrap: anywhere;
+}
+
+.home-content {
+  max-width: 43rem;
+}
+
+.home-intro {
+  font-size: 1.02rem;
+}
+
+.home-intro p,
+.project-item p {
+  color: var(--ink);
+}
+
+.home-section {
+  margin-top: 1.45rem;
+}
+
+.home-section p {
+  margin-bottom: 0;
+  color: var(--ink);
+}
+
+.education-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--ink);
+}
+
+.education-list li + li {
+  margin-top: 0.28rem;
+}
+
+.page-title {
+  padding-bottom: 0.65rem;
+}
+
+.section-block {
+  padding: 0.7rem 0 1.2rem;
+}
+
+.project-list {
+  max-width: 50rem;
+}
+
+.research-group + .research-group {
+  margin-top: 2rem;
+}
+
+.research-group h2 {
+  margin-bottom: 0.95rem;
+  font-size: 1.05rem;
+}
+
+.project-item {
+  margin-bottom: 1.25rem;
+}
+
+.project-item h3 em {
+  color: var(--ink);
+  font-weight: 400;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 0.1rem;
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+
+.button-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.45rem;
+  padding: 0.45rem 1rem;
+  color: #fff;
+  background: var(--duke-blue);
+  border-radius: 3px;
+  font-weight: 700;
+}
+
+.button-link:hover,
+.button-link:focus-visible {
+  color: #fff;
+  text-decoration: none;
+  filter: brightness(0.94);
+}
+
+.life-hero {
+  min-height: 340px;
+  display: grid;
+  align-items: end;
+  background:
+    linear-gradient(180deg, rgba(1, 33, 105, 0.2) 0%, rgba(1, 33, 105, 0.55) 100%),
+    url("./assets/life-hero.jpg") center 48% / cover no-repeat;
+}
+
+.life-hero-text {
+  width: min(100%, var(--max));
+  margin: 0 auto;
+  padding: 0 1.25rem 2rem;
+  color: #fff;
+}
+
+.life-hero h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.15rem, 6vw, 3.6rem);
+}
+
+.life-content {
+  min-height: 14rem;
+}
+
+.site-footer {
+  width: min(100%, var(--max));
+  margin: 0 auto;
+  padding: 0 1.25rem 2.2rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 820px) {
+  .home-shell {
+    grid-template-columns: 1fr;
+    gap: 1.55rem;
+  }
+
+  .profile-panel {
+    position: static;
+    display: grid;
+    grid-template-columns: 136px minmax(0, 1fr);
+    gap: 0 1rem;
+    text-align: left;
+  }
+
+  .profile-photo {
+    grid-row: span 5;
+    width: 136px;
+    height: 168px;
+    margin: 0;
+  }
+
+  .profile-links {
+    grid-column: 1 / -1;
+    margin-top: 0.55rem;
+  }
+
+  .profile-chinese-name,
+  .profile-role,
+  .profile-org,
+  .profile-location {
+    margin-bottom: 0.25rem;
+  }
+}
+
+@media (max-width: 620px) {
+  body {
+    font-size: 15px;
+  }
+
+  .site-nav {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+
+  .nav-links a {
+    min-width: auto;
+  }
+
+  .home-shell,
+  .page-shell {
+    padding-top: 1.45rem;
+  }
+
+  .profile-panel {
+    display: block;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 170px;
+    height: 210px;
+    margin: 0 auto 1rem;
+  }
+
+  .life-hero {
+    min-height: 260px;
+  }
+}
