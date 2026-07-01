@@ -61,7 +61,7 @@ window.siteData = {
             title: "Crisis-Driven Institution Building: Evidence from COVID-19",
             coauthors: "with Xiongfu Xiao",
             status: "under review",
-            ssrnUrl: "",
+            ssrnUrl: "https://ssrn.com/abstract=6994658",
             description:
               "Develops a sequential theory of crisis-driven institution building using a country-week panel of COVID-19 responses, fixed effects, and a leave-one-out exposure instrumental-variable design.",
             preprintUrl: ""

@@ -79,7 +79,7 @@ function makeProjectArticle(item) {
   }
   if (item.ssrnUrl) {
     if (item.status) status.appendChild(document.createTextNode(" · "));
-    status.appendChild(makeLink(item.ssrnUrl, "SSRN"));
+    status.appendChild(makeLink(item.ssrnUrl, "[pre-print]"));
   }
   p.textContent = item.description;
   article.appendChild(h3);
