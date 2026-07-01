@@ -1,0 +1,169 @@
+个人网站文件夹位置
+
+你的网站相关文件都在这个文件夹里：
+
+/Users/sleep/Documents/Playground
+
+公开网站链接：
+
+https://shengsxzi.github.io/
+
+
+一、平时主要修改哪里
+
+1. 修改网站文字内容
+
+主要编辑：
+
+/Users/sleep/Documents/Playground/site-data.js
+
+这里可以修改：
+- 个人姓名、中文名、身份、邮箱
+- 首页自我介绍
+- Research Interests
+- Education
+- Research 页面里的 Work in Progress 和 Working Papers
+- 之后的 Preprint 链接
+- CV PDF 路径
+
+2. 修改页面样式
+
+主要编辑：
+
+/Users/sleep/Documents/Playground/styles.css
+
+这里可以修改：
+- 字号
+- 颜色
+- 间距
+- 页面布局
+- 照片大小和裁剪位置
+- 导航栏样式
+
+3. 修改页面结构
+
+这些文件控制不同页面：
+
+/Users/sleep/Documents/Playground/index.html
+/Users/sleep/Documents/Playground/research.html
+/Users/sleep/Documents/Playground/cv.html
+/Users/sleep/Documents/Playground/life.html
+
+4. 替换图片和 CV
+
+图片和 PDF 文件放在：
+
+/Users/sleep/Documents/Playground/assets
+
+常用文件：
+- profile.jpg：首页个人照片
+- life-hero.jpg：Life 页面顶部图片
+- Shaoxuanzi_Sheng_CV.pdf：CV 下载文件
+
+
+二、修改后如何本地查看
+
+方法一：直接打开本地网页
+
+file:///Users/sleep/Documents/Playground/index.html
+
+方法二：用本地服务器预览
+
+打开 Terminal，输入：
+
+cd "/Users/sleep/Documents/Playground"
+python3 -m http.server 8000
+
+然后在浏览器打开：
+
+http://localhost:8000
+
+预览结束后，在 Terminal 里按：
+
+Control + C
+
+停止服务器。
+
+
+三、修改后如何提交并推送到 GitHub
+
+1. 打开 Terminal，进入网站文件夹
+
+cd "/Users/sleep/Documents/Playground"
+
+2. 查看改了哪些文件
+
+git status
+
+3. 暂存改动
+
+git add .
+
+4. 再检查一次暂存状态
+
+git status
+
+5. 提交改动
+
+提交信息可以根据你这次改了什么来写，例如：
+
+git commit -m "Update website content"
+
+如果只改了 research 页面，可以写：
+
+git commit -m "Update research page"
+
+如果只替换了 CV，可以写：
+
+git commit -m "Update CV"
+
+6. 推送到 GitHub
+
+git push
+
+推送成功后，等待几十秒到几分钟，然后打开：
+
+https://shengsxzi.github.io/
+
+如果页面没有立刻更新，可以按：
+
+Command + Shift + R
+
+强制刷新网页。
+
+
+四、最常用的一整套命令
+
+每次修改完网站后，可以直接按顺序运行：
+
+cd "/Users/sleep/Documents/Playground"
+git status
+git add .
+git commit -m "Update website content"
+git push
+
+
+五、填写 Preprint 链接的方法
+
+打开：
+
+/Users/sleep/Documents/Playground/site-data.js
+
+找到对应 research project 下面的：
+
+preprintUrl: ""
+
+把空引号改成链接，例如：
+
+preprintUrl: "https://example.com/paper.pdf"
+
+保存后，Research 页面会自动显示 Preprint 链接。
+
+
+六、重要提醒
+
+1. 不要删除 .git 文件夹，它负责连接 GitHub。
+2. 不要上传私钥文件，例如 ~/.ssh/id_rsa。
+3. 可以上传公钥文件内容，例如 ~/.ssh/id_rsa.pub，但通常只需要在 GitHub 设置 SSH key 时使用一次。
+4. 如果你不确定某次修改是否安全，可以先运行 git status 看看改了哪些文件。
+5. 如果 push 后网页没有马上变化，通常是 GitHub Pages 缓存，等一会儿或强制刷新即可。
