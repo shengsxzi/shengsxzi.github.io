@@ -246,6 +246,10 @@ h3 {
   max-width: 52rem;
 }
 
+.research-intro {
+  max-width: 52rem;
+}
+
 .research-group + .research-group {
   margin-top: 2rem;
 }

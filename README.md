@@ -21,7 +21,7 @@
 
 - `profile`: 姓名、身份、单位、邮箱、头像、链接
 - `home`: 首页简介、research interests、education
-- `research`: Research 页面，包括 work in progress、working papers 和之后的 preprint 链接
+- `research`: Research 页面；`intro` 是研究概述，`sections` 控制 Working Papers 和 Work in Progress 的项目内容及顺序，每个项目可编辑标题、合作者、状态、简介和预印本链接
 - `cv`: CV PDF 链接
 
 ## 本地预览

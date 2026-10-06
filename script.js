@@ -126,6 +126,7 @@ function renderHome(data) {
 }
 
 function renderResearchPage(data) {
+  renderParagraphs(data.research.intro || [], "research-intro");
   renderResearchSections(data.research.sections, "research-projects");
 }
 
